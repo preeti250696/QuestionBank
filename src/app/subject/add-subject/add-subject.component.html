@@ -1,0 +1,36 @@
+<div class="main-content mr-4">
+  <div class="content-box">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="mt-1">
+          <h4 class="heading1">Add new Subject</h4>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <form [formGroup]="subjectForm" (ngSubmit)="submitForm()">
+        <div class="row mt-2">
+          <div class="col-md-4">
+            <mat-form-field>
+              <mat-select placeholder="Class" required formControlName="class">
+                <mat-option *ngFor="let class of ClassList | keyvalue" [value]="class.value.ID">{{class.value.Text}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field>
+                <mat-select placeholder="Subject" required formControlName="subject">
+                  <mat-option *ngFor="let sub of SubjectList | keyvalue" [value]="sub.value.ID">{{sub.value.Text}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              </div>
+          </div>
+          </form>
+      </div>
+      <div class ="text-right mr-10">
+        <p-button  class="btn btn-sm btn-reset mr-2" (click)="cancel()"> Cancel </p-button>
+        <p-button  class="btn btn-sm btn-search mr-1" type="submit">  Save </p-button>
+      </div>
+    </div>
+</div>

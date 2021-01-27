@@ -1,1 +1,122 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  margin: 0;
+}
+.top-header{
+  background-color: #28314b;
+  color:#fff;
+  height: 60px;
+}
+.side-menu{
+  width:260px;
+  left:0;
+  position: fixed;
+  height: 100%;
+  background-color: #dadada;
+  z-index: 5;
+  border-right: 1px solid #bbb;
+}
+.side-menu ul{
+  padding-left: 0px;
+}
+.side-menu ul li a{
+  padding:8px 8px 8px 11px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+.main-content{
+ background-color: #fff;
+ z-index: 999;
+ position: relative;
+}
+.content-box{
+  padding: 15px 25px 15px 25px;
+  background-color: #fff;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.card{
+  border:0px;
+  border-radius: 0px;
+  padding:12px 0px;
+  background-color: #fff;
+}
+.heading1{
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+.side-menu-content{
+  margin-left:260px;
+}
+.mat-form-field{
+  width: 100%;
+  font-size:14px !important;
+  font-weight: 500 !important;
+}
+.btn-search{
+  background-color: #337ab7;
+  border-radius: 28px;
+  padding:4px 14px;
+}
+.btn-reset{
+  background-color: #a2a2a2;
+  padding: 4px 14px;
+  border-radius: 28px;
+}
+.btn .p-button{
+  border:0px;
+  padding:0px;
+  background-color:transparent;
+  color:#fff;
+}
+.btn .p-button:enabled:hover, .btn .p-button:enabled:focus, .p-button:enabled:active{
+  background-color: transparent;
+  box-shadow: 0 0 0 0;
+  border: 0px !important;
+}
+.p-datatable{
+  border: 1px solid #eee;
+}
+.p-datatable .p-datatable-thead > tr >th{
+ font-weight: 600;
+ color:#455a64;
+ font-size: 14px;
+ padding: 1rem 1rem;
+ border-bottom: 1px solid#e9ecef;
+}
+.p-datatable .p-datatable-tbody > tr >td{
+  font-weight: 500;
+  font-size: 13px;
+  padding: 1rem 1rem;
+ border-bottom: 1px solid#e9ecef;
+ }
+ .p-datatable-header{
+  font-weight: 600;
+  color:#455a64;
+  font-size: 14px;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid#e9ecef;
+  background-color:#f8f9fa;
+ }
+ .btn-addNew{
+   background-color: #17a591;
+   padding: 4px 14px;
+   border-radius: 28px;
+ }
+ .side-menu-btn{
+  margin-top:20px;
+  margin-right:10px;
+ }
+.mat-placeholder-required{
+  color:red;
+  font-size:13px;
+}
+.fp-box{
+  background-color: #fbfbfb;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
+  width: 100%;
+  margin: auto;
+  padding: 40px;
+}

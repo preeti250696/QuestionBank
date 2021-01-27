@@ -1,0 +1,75 @@
+<div class="main-content">
+  <div class="content-box">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="heading1">Add Question</h4>
+      </div>
+    </div>
+    <div class="card">
+      <form [formGroup]="addQuestionForm" (ngSubmit)="saveQuestion()">
+      <div class="row">
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-select placeholder="Class" formControlName="classId" required (selectionChange)="getSubjectList()">
+              <mat-option *ngFor="let class of ClassList | keyvalue" [value]="class.value.ID">{{class.value.Text}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-select placeholder="Subject" formControlName="subjectId" required (selectionChange)="getChapterList()">
+              <mat-option *ngFor="let sub of SubjectList | keyvalue" [value]="sub.value.ID">{{sub.value.Text}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-select placeholder="Chapter" (selectionChange)="getTopicList($event.value)" formControlName="chapterId" required>
+              <mat-option *ngFor="let chapt of ChapterList | keyvalue" [value]="chapt.value.ID">{{chapt.value.Text}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-select placeholder="Topic" formControlName="topicId" required>
+              <mat-option *ngFor="let topic of TopicList" [value]="topic">{{topic}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-select placeholder="Type" formControlName="typeId">
+              <mat-option *ngFor="let type of typeList | keyvalue" [value]="type.value.ID">{{type.value.Text}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-select placeholder="Category" formControlName="catId" required>
+              <mat-option *ngFor="let cat of categories" [value]="cat">{{cat}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-select placeholder="Module" formControlName="moduleId">
+              <mat-option *ngFor="let module of moduleList | keyvalue" [value]="module.value.ID">{{module.value.Text}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-12">
+          <mat-form-field>
+            <mat-label>Question</mat-label>
+            <textarea matInput required formControlName="questionText"></textarea>
+          </mat-form-field>
+          </div>
+          <div class="col-md-12 text-right">
+            <p-button class="btn btn-sm btn-reset mr-2" label="Cancel" (click)="cancel()"></p-button>
+            <p-button class="btn btn-sm btn-search" label="Save" type="submit"></p-button>
+            </div>
+      </div>
+</form>
+    </div>
+  </div>
+</div>
+
